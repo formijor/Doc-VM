@@ -6,7 +6,11 @@ Created on 21 jun. 2021
 
 class Procesador():
     def __init__(self):
+        self.modelo = ''
         self.cant_procesadores = 0
+    
+    def set_modelo(self, modelo):
+        self.modelo = modelo
     
     def set_cant_procesadores(self, cantidad):
         self.cant_procesadores = cantidad
@@ -60,12 +64,20 @@ class OracleShape():
     
 class DinamicShape(OracleShape):
     def __init__(self):
-        pass
+        self.shape = 'Dinamico'
+        self.tipo = ''
+        
+    def set_tipo(self, tipo):
+        self.tipo = tipo
     
     
 class StaticShape(OracleShape):
     def __init__(self):
-        pass
+        self.shape = 'Estatico'
+        self.tipo = ''
+        
+    def set_tipo(self, tipo):
+        self.tipo = tipo
     
 class SistemaOperativo():
     def __init__(self):
@@ -86,3 +98,44 @@ class SistemaOperativo():
     def set_arquitectura(self, arquitectura):
         self.arquitectura = arquitectura
     
+class MaquinaVirtual():
+    def __init__(self):
+        self.hostname = None
+        self.dominio = None
+        self.ambiente = None
+        self.es_cluster = None
+        self.cluster = None
+        self.ip = None
+        self.shape = None
+        self.SO = None
+        self.storage = None
+        
+    def set_hostname(self, hostname):
+        self.hostname = hostname
+        
+    def set_dominio(self, dominio):
+        self.dominio = dominio
+        
+    def set_ambiente(self, ambiente):
+        self.ambiente = ambiente
+        
+    def set_es_cluster(self, es_cluster):
+        self.es_cluster = es_cluster
+        
+    def set_cluster(self, nombre):
+        self.cluster = nombre
+        
+    def set_ip(self, ip):
+        self.ip = ip
+        
+    def set_shape(self, shape):
+        self.shape = shape
+    
+    def set_SO(self, SO):
+        self.SO = SO
+        
+    def set_storage(self, storage):
+        self.storage = storage
+    
+    
+

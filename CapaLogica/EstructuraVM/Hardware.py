@@ -36,16 +36,53 @@ class Ram():
 class Storage():
     def __init__(self):
         self.lista_storage = []
+        
+    def add_storage(self, storage):
+        self.lista_storage.append(storage)
     
 class OracleShape():
     def __init__(self):
+        self.nombre = ''
+        self.procesador = ''
+        self.ram = ''
+        
+    def set_nombre(self, nombre):
+        self.nombre = nombre
+        
+    def get_nombre(self):
+        return self.nombre
+    
+    def set_procesador(self, procesador):
+        self.procesador = procesador
+        
+    def set_ram(self, ram):
+        self.ram = ram
+    
+class DinamicShape(OracleShape):
+    def __init__(self):
         pass
     
-class OracleDinamic(OracleShape):
+    
+class StaticShape(OracleShape):
     def __init__(self):
         pass
     
 class SistemaOperativo():
     def __init__(self):
-        pass
+        self.SO = ''
+        self.version = ''
+        self.edicion = ''
+        self.arquitectura = ''
+        
+    def set_SO(self, SO):
+        self.SO = SO
+        
+    def set_version(self, version):
+        self.version = version
+        
+    def set_edicion(self, edicion):
+        self.edicion = edicion
+        
+    def set_arquitectura(self, arquitectura):
+        self.arquitectura = arquitectura
     

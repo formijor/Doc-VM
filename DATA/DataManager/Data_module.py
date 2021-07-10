@@ -7,10 +7,9 @@ Created on 10 jul. 2021
 
 class DataQuery():
     def __init__(self):
-        pass
+        self.DataRead = DataRead()
+        self.DataWrite = DataWrite()
     
-    
-
 
 class DataRead():
     def __init__(self):
